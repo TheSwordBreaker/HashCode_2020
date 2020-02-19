@@ -37,6 +37,7 @@ with open(fileName,"r") as f:
     sliceOfPizza = int(line1[0])
     TotalTypesOfPizza = int(line1[1].strip())
     
+    
     typesOfPizza = list(f.readline().strip().split(" "))
     typesOfPizza = tuple(int(i) for i in typesOfPizza)
 

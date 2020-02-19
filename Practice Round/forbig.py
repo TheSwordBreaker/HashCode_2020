@@ -7,6 +7,7 @@ def SubsetSum(array, n, check):
     for i in reversed(range(len(array))):
         if sum + array[i] < check:
             sum += array[i]
+            print
             sol.append(i)
 
     
@@ -26,7 +27,7 @@ def SubsetSum(array, n, check):
 
 
 def takeinput():
-    fileName = input("Enter the File:")
+    fileName = input()
     with open(fileName,"r") as f:
         line1 = f.readline().split(" ")
         sliceOfPizza = int(line1[0])

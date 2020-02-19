@@ -2,7 +2,7 @@ from  itertools import combinations
 import numpy as np
 
 #input
-fileName = input("Enter the File:")
+fileName = input()
 with open(fileName,"r") as f:
     line1 = f.readline().split(" ")
      
@@ -13,7 +13,7 @@ with open(fileName,"r") as f:
     typesOfPizza = [int(i) for i in typesOfPizza]
     # print(sliceOfPizza,typesOfPizza,TotalTypesOfPizza)
     
-    
+   
         
 #Declaration
 
@@ -33,77 +33,20 @@ for j in Subsets:
         SumOfSets.append(sum(list(i)))
         # print(Sets,SumOfSets)
        
-# FInding the best value
-# for i in range(len(SumOfSets)):
-#     if(SumOfSets[i] >= AnswerIndex):
-#         if(SumOfSets[i] <= sliceOfPizza):
-#             AnswerIndex = i
-#             if(AnswerIndex == sliceOfPizza):
-#                 break
-#             print("-----")
-#             print(SumOfSets[i] )
-#             print("-----")
-#             print(*Sets[i])
-#             print("####")
-
-
-# SumOfSets = np.array(SumOfSets)
-# for i in range(sliceOfPizza,0,-1):
-#     AnswerIndex += np.where(SumOfSets == i)
-# # AnswerIndex = np.where(SumOfSets == sliceOfPizza)
-
-#  FInding the best value
 d = dict(zip(SumOfSets,Sets))
 
 for i in range(sliceOfPizza,0,-1):
     if(i in d):
-        print(i)
-        print(d[i])
+        
+        my = d[i]
+        print(len(my))
+        print(*my)
         break
+#output
+with open("answer"+str(len(my)) +".out","w") as f:
+    f.write(str(len(my))+"\n")
+    f.write(' '.join([str(i) for i in my]))
 
 
 
 
-
-# for i in range(len(SumOfSets)):
-#     if(SumOfSets[i] == sliceOfPizza):
-#         AnswerIndex = i
-#         break
-#     elif(SumOfSets[i] <= sliceOfPizza):
-#         # AnswerIndex = i
-#         # break
-#         pass
-
-# s = SumOfSets.sort(reverse=True)
-
-
-# print(d)
-# # result = filter(lambda x: x % 2 == 0, seq) 
-# print(SumOfSets)
-
-# for i in range(len(SumOfSets)):
-#     if(SumOfSets[i] == sliceOfPizza):
-#         AnswerIndex = i
-#         break
-#     elif(SumOfSets[i] <= sliceOfPizza):
-#         # AnswerIndex = i
-#         # break
-#         pass
-
-
-#         print("-----")
-#         print(SumOfSets[i] )
-#         print("-----")
-#         print(*Sets[i])
-#         print("####")
-
-
-# output
-# print(AnswerIndex)
-# print(SumOfSets[AnswerIndex])
-# print(*Sets[AnswerIndex])
-
-# print(AnswerIndex[0][0])
-
-# print(SumOfSets[AnswerIndex[0][0]])
-# print(*Sets[AnswerIndex[0][0]])

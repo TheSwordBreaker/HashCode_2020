@@ -1,1 +1,0 @@
-http://www.or.deis.unibo.it/kp/Chapter4.pdf
