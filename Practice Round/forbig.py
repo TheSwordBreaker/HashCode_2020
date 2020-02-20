@@ -15,17 +15,6 @@ def SubsetSum(array, n, check):
     print(*sol)
     return sol
 
-
-
-
-
-
-
-
-
-
-
-
 def takeinput():
     fileName = input()
     with open(fileName,"r") as f:
